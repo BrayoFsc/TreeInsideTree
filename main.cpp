@@ -94,17 +94,14 @@ int main()
 {
    Tree *arvore = NULL;
    tNo *no = NULL;
-   no = init(23);
-
    char *input;
-   int i = 0;
    input = (char *)malloc(200 * sizeof(char));
    while (fgets(input, 200, stdin))
    {
+      int i = 2;
       switch (input[0])
       {
       case 'i':
-         i += 2;
          no = buildBranch(input, &i);
          arvore = insertBranch(arvore, no);
          break;
